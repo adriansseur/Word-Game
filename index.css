@@ -1,52 +1,90 @@
 body {
-    margin: 0;
-    height: 100vh;
+    margin: 1.5em;
+    height: 90vh;
+    /* box-sizing: border-box; */
+    font-family: 'Alata', sans-serif;
+    font-size: small;
+    background: #30689C;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 #title {
-    margin: 0;
-    margin-top: 1em;
-    padding: 1rem;
+    margin-top: 0;
+    color: white;
     text-align: center;
+    font-size: medium;
+    /* box-sizing: border-box; */
 }
 
-#container-game {
-    border: 1px solid red;
-    width: 80%;
-    margin: auto;
+#word-container {
+    background-color: #FF9393;
+    border-radius: 10px;
+    height: 25%;
+    padding: 1em;
+    display: grid;
+    /* box-sizing: border-box; */
+}
+
+#btn-get-word,
+#btn-check-audio,
+#btn-increase-score {
+    border: none;
+    width: 7rem;
+    height: 2rem;
+    border-radius: 10px;
+    box-shadow: 0.5px 0.5px 0.5px black;
+    background: purple;
+}
+
+#btn-get-word {
+    /* width: fit-content; */
+    /* height: fit-content; */
+    justify-self: center;
+    /* display: block; */
+    /* margin: auto; */
+    /* box-sizing: border-box; */
+    background-image: linear-gradient(white 10%, #FF9393);
+}
+
+#word-box {
+    background-color: #EEEEEE;
+    height: 2em;
+    border-radius: 10px;
+}
+
+#btn-check-audio {
+    /* display: block; */
+    /* margin: auto; */
+    /* box-sizing: border-box; */
+    /* width: fit-content; */
     align-self: center;
+    background-image: linear-gradient(white 20%, #30689C);
+}
+
+#score-container {
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    /* box-sizing: border-box; */
+}
+
+#player1 {
+    padding: 1em;
     display: grid;
-    grid-template: 1em auto auto 1em / 1em auto 1fr 1em;
+    grid-template: auto auto / auto auto;
 }
 
-#say {
-    grid-row: 2;
-    grid-column: 2;
-    padding-right: 1em;
+#player-name,
+#player-score {
+    justify-self: center;
 }
 
-#word {
-    grid-row: 2;
-    grid-column: 3;
-    border: 1px solid;
-    text-align: center;
-}
+#btn-increase-score {
+    grid-column: span 2;
+    /* width: fit-content; */
+    justify-self: center;
+    background: rgb(227, 0, 0);
+    color: white;
 
-#check-audio {
-    grid-row: 3;
-    grid-column: 2 / 4;
-}
-
-#container-scores {
-    margin: 2em 0;
-    border: 1px solid purple;
-    display: grid;
-    grid-template: auto / auto auto auto;
-}
-
-.player {
-    border: 1px solid green;
 }
