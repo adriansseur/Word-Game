@@ -54,8 +54,16 @@ body {
 
 #word-box {
     background-color: #EEEEEE;
-    height: 4em;
+    height: 6em;
+    width: 100%;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#random-word {
+    font-size: 2em;
 }
 
 #btn-check-audio {
