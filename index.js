@@ -6,7 +6,7 @@ btnEnter.addEventListener("click", enter)
 const keyBox = document.getElementById("key-box")
 const errorMessage = document.getElementById("error-message")
 const keyHolder = document.getElementById("key-holder")
-const title = document.getElementById("title")
+// const title = document.getElementById("title")
 const wordContainer = document.getElementById("word-container")
 const wordBox = document.getElementById("word-box")
 const btnGetWord = document.getElementById("btn-get-word")
@@ -23,7 +23,7 @@ words = ["abacavir", "abatacept", "abciximab", "Acanthocheilonema", "accoucheuse
 
 keyHolder.style.display = "none"
 
-const gameElements = [title, wordContainer, btnCheckAudio, scoreContainer]
+const gameElements = [wordContainer, btnCheckAudio, scoreContainer]
 
 gameElements.forEach(element => element.style.display = "none")
 
