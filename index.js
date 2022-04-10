@@ -1,31 +1,31 @@
-// The purpose of this game is to showcase my abilities in front end web development. Specifically, I show my understanding of APIs and capacity to call one in order to make a simple game. Here I am calling the renowned dictionary Merriam Webster's API.
+// access container - security checkpoint
+// const accessContainer = document.getElementById("access-container")
+// const btnEnter = document.getElementById("btn-enter")
+// const keyBox = document.getElementById("key-box")
+// const errorMessage = document.getElementById("error-message")
+// btnEnter.addEventListener("click", enter)
 
-const accessContainer = document.getElementById("access-container")
-const btnEnter = document.getElementById("btn-enter")
-btnEnter.addEventListener("click", enter)
-const keyBox = document.getElementById("key-box")
-const errorMessage = document.getElementById("error-message")
+// game container
 const keyHolder = document.getElementById("key-holder")
-// const title = document.getElementById("title")
 const wordContainer = document.getElementById("word-container")
 const wordBox = document.getElementById("word-box")
 const btnGetWord = document.getElementById("btn-get-word")
-btnGetWord.addEventListener("click", getWord)
 const btnCheckAudio = document.getElementById("btn-check-audio")
-btnCheckAudio.addEventListener("click", checkAudio)
 const scoreContainer = document.getElementById("score-container")
 const btnIncreaseScore = document.getElementById("btn-increase-score")
-btnIncreaseScore.addEventListener("click", increaseScore)
 const playerScore = document.getElementById("player-score")
 let score = 0
+btnGetWord.addEventListener("click", getWord)
+btnCheckAudio.addEventListener("click", checkAudio)
+btnIncreaseScore.addEventListener("click", increaseScore)
 
-words = ["abacavir", "abatacept", "abciximab", "Acanthocheilonema", "accoucheuse", "acetabuloplasty", "acrocephalosyndactyly", "amaurosis", "androstenedione", "anoesis", "antifluoridationist", "antileishmanial", "antiricin", "arytenoepiglottic", "babesiasis", "balanopreputial", "bevacizumab", "bitrochanteric", "brodifacoum", "bronchomoniliasis"]
+let words = ["abacavir", "abatacept", "abciximab", "Acanthocheilonema", "accoucheuse", "acetabuloplasty", "acrocephalosyndactyly", "amaurosis", "androstenedione", "anoesis", "antifluoridationist", "antileishmanial", "antiricin", "arytenoepiglottic", "babesiasis", "balanopreputial", "bevacizumab", "bitrochanteric", "brodifacoum", "bronchomoniliasis"]
 
 keyHolder.style.display = "none"
 
 const gameElements = [wordContainer, btnCheckAudio, scoreContainer]
 
-gameElements.forEach(element => element.style.display = "none")
+// gameElements.forEach(element => element.style.display = "none")
 
 
 function enter() {
