@@ -1,19 +1,18 @@
 // access container - security checkpoint
-// const accessContainer = document.getElementById("access-container")
-// const btnEnter = document.getElementById("btn-enter")
-// const keyBox = document.getElementById("key-box")
-// const errorMessage = document.getElementById("error-message")
-// btnEnter.addEventListener("click", enter)
+const accessContainer = document.getElementById("access-container")
+const btnEnter = document.getElementById("btn-enter")
+const keyBox = document.getElementById("key-box")
+const errorMessage = document.getElementById("error-message")
+btnEnter.addEventListener("click", enter)
 
 // game container
 const keyHolder = document.getElementById("key-holder")
-const wordContainer = document.getElementById("word-container")
 const wordBox = document.getElementById("word-box")
 const btnGetWord = document.getElementById("btn-get-word")
 const btnCheckAudio = document.getElementById("btn-check-audio")
-const scoreContainer = document.getElementById("score-container")
 const btnIncreaseScore = document.getElementById("btn-increase-score")
 const playerScore = document.getElementById("player-score")
+const gameContainer = document.getElementById("game-container")
 let score = 0
 btnGetWord.addEventListener("click", getWord)
 btnCheckAudio.addEventListener("click", checkAudio)
@@ -22,10 +21,7 @@ btnIncreaseScore.addEventListener("click", increaseScore)
 let words = ["abacavir", "abatacept", "abciximab", "Acanthocheilonema", "accoucheuse", "acetabuloplasty", "acrocephalosyndactyly", "amaurosis", "androstenedione", "anoesis", "antifluoridationist", "antileishmanial", "antiricin", "arytenoepiglottic", "babesiasis", "balanopreputial", "bevacizumab", "bitrochanteric", "brodifacoum", "bronchomoniliasis"]
 
 keyHolder.style.display = "none"
-
-const gameElements = [wordContainer, btnCheckAudio, scoreContainer]
-
-// gameElements.forEach(element => element.style.display = "none")
+gameContainer.style.display = "none"
 
 
 function enter() {
@@ -34,9 +30,8 @@ function enter() {
         .then(res => res.json())
         .then(data => {
             if (data) {
-                gameElements.forEach(element => element.style.display = "initial")
-                wordContainer.style.display = "grid"
                 accessContainer.style.display = "none"
+                gameContainer.style.display = "initial"
                 keyHolder.textContent = key
             }
         })
@@ -48,7 +43,6 @@ function enter() {
             errorMessage.textContent = "Sorry, not a valid key."
         })
 }
-
 
 function getWord() {
     const randomNum = Math.floor(Math.random() * words.length)
@@ -78,6 +72,3 @@ function increaseScore() {
     score++
     playerScore.textContent = `Score: ${score}`
 }
-
-
-
